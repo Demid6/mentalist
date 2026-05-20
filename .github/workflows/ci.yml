@@ -19,10 +19,10 @@ jobs:
       with:
         python-version: '3.11'
     
-    - name: Install dependencies for web_service
+    - name: Install dependencies
       run: |
         cd web_service/mentalist_files
-        pip install -r requirements.txt || true
+        pip install -r requirements.txt
     
     - name: Run Django checks
       run: |
