@@ -1,0 +1,26 @@
+name: Deploy on Mac
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Pull latest changes
+      run: git pull origin main
+    
+    - name: Run Docker Compose
+      run: |
+        docker-compose down
+        docker-compose up -d --build
+    
+    - name: Check site
+      run: |
+        sleep 3
+        curl -I http://localhost:8000
