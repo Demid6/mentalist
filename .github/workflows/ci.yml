@@ -21,7 +21,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        cd web_service/mentalist_files
+        cd web_service
         pip install -r requirements.txt
     
     - name: Run Django checks
