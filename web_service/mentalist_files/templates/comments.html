@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/comments.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="section">
+
+    <div class="page-heading">
+        <h1>Теории по делам CBI</h1>
+        <p>Делитесь версиями, гипотезами и наблюдениями по текущим расследованиям</p>
+    </div>
+
+    <div class="comments-container">
+        <div class="comment-form">
+            <h3>Добавить версию</h3>
+            <input type="text" id="comment-username" placeholder="Ваш позывной" maxlength="50">
+            <textarea id="comment-text" placeholder="Опишите гипотезу по делу..." rows="3" maxlength="500"></textarea>
+            <button id="submit-comment">Передать в архив</button>
+        </div>
+
+        <div class="comments-list" id="comments-list">
+            <div class="loading">Загрузка комментариев...</div>
+        </div>
+    </div>
+
+</div>
+
+<script src="{% static 'js/comments.js' %}"></script>
+{% endblock %}

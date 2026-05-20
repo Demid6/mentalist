@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="section">
+
+    <div class="page-heading">
+        <h1>Академия детективов</h1>
+        <p>Закрытый раздел для агентов: практики наблюдения, допроса и аналитики.</p>
+    </div>
+
+    <nav class="page-nav" aria-label="Модули академии">
+        <h3>Модули</h3>
+        <ul>
+            <li><a href="#today">Наблюдение</a></li>
+            <li><a href="#tomorrow">Допрос</a></li>
+            <li><a href="#weekend">Аналитика</a></li>
+        </ul>
+    </nav>
+
+    <div class="cards-grid">
+
+        <div class="card" id="today">
+            <div class="card-icon">МОДУЛЬ · 001</div>
+            <h2>Наблюдение</h2>
+            <p>
+                <strong>Цель:</strong> отличать факт от интерпретации за первые 30 секунд контакта.
+            </p>
+            <p>
+                <em>Практика:</em> чтение микроизменений в позе, взгляде и дыхании.
+            </p>
+
+            <h3>Упражнения:</h3>
+            <ol class="news-list">
+                <li>Холодное чтение: базовый профиль незнакомца</li>
+                <li>Сравнение контрольного и стрессового поведения</li>
+                <li>Фиксация деталей без потери контекста</li>
+            </ol>
+
+            <!-- Изображение через внешнюю ссылку -->
+            <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop&crop=top"
+                alt="Наблюдение и чтение поведения — практика CBI"
+                class="sport-image">
+        </div>
+
+        <div class="card" id="tomorrow">
+            <div class="card-icon">МОДУЛЬ · 002</div>
+            <h2>Допрос</h2>
+            <blockquote class="quote">"Люди говорят правду, когда думают, что вы и так уже всё знаете."</blockquote>
+            <ul class="news-list">
+                <li><strong>Техника:</strong> открывающие вопросы вместо прямого давления</li>
+                <li><strong>Техника:</strong> ловушки на противоречия в таймлайне</li>
+                <li><strong>Техника:</strong> контроль темпа и стратегические паузы</li>
+                <li><strong>Техника:</strong> провокация реакции через неожиданную деталь</li>
+            </ul>
+        </div>
+
+        <div class="card" id="weekend">
+            <div class="card-icon">МОДУЛЬ · 003</div>
+            <h2>Аналитика кейса</h2>
+            <ol class="news-list">
+                <li>Сбор картины
+                    <ul>
+                        <li>Разделение фактов, версий и шумовых следов</li>
+                        <li>Приоритизация гипотез по проверяемости</li>
+                    </ul>
+                </li>
+                <li>Финальный разбор
+                    <ul>
+                        <li>Построение убедительной версии для команды</li>
+                        <li>План добора недостающих доказательств</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p>
+                <a href="/cases/">Открыть досье дел</a> ·
+                <a href="/">Вернуться в архив CBI</a>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

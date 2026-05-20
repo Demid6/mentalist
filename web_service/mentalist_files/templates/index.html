@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+        <div class="hero-badge">Архив дел CBI</div>
+        <h1 id="hero-title">
+            Каждое дело — это<br>
+            <span class="accent">игра разума</span>
+        </h1>
+        <p class="hero-sub">
+            Улики, допросы, психологические ходы и рискованные провокации —<br>
+            вся хронология расследований Патрика Джейна в одном архиве.
+        </p>
+        <div class="hero-actions">
+            <a href="/cases/" class="btn-primary" id="hero-cta-cases">Открыть дела →</a>
+            <a href="/academy/" class="btn-secondary" id="hero-cta-academy">Академия детективов</a>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== MAIN CARDS SECTION ===== -->
+<div class="section" id="main-content">
+
+    <!-- Quick Nav -->
+    <nav class="page-nav" aria-label="Быстрая навигация">
+        <h3>На этой странице</h3>
+        <ul>
+            <li><a href="#news">Досье недели</a></li>
+            <li><a href="#table">Фигуранты</a></li>
+            <li><a href="#video">Видеоразбор</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section header -->
+    <div class="section-header">
+        <div class="section-label">CBI архив · Калифорния</div>
+        <h2 class="section-title">Ключевые материалы расследований</h2>
+        <p class="section-desc">Следите за делами, где ментализм, интуиция и тонкая провокация помогают выйти на преступника.</p>
+    </div>
+
+    <div class="cards-grid">
+
+        <!-- Главное досье -->
+        <div class="card" id="news">
+            <div class="card-icon">ДОСЬЕ · 001</div>
+            <h2>Главное досье</h2>
+            <blockquote class="quote">"Убийца всегда оставляет историю, которую хочет, чтобы мы прочитали."</blockquote>
+            <p>
+                Патрик Джейн отмечает: символы и ритуалы могут быть важнее прямых улик.
+                Сегодня команда CBI проводит <strong>контролируемую ловушку</strong> для
+                подозреваемого, связанного с красной нитью.
+            </p>
+            <p>
+                <em>Статус:</em> расследование активно. Следите за обновлениями.
+            </p>
+        </div>
+
+        <!-- Фото с доски улик — изображение через внешнюю ссылку -->
+        <div class="card">
+            <div class="card-icon">УЛИКИ · 002</div>
+            <h2>Фото с доски улик</h2>
+            <img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&fit=crop"
+                alt="Патрик Джейн у доски улик CBI — материалы дела"
+                class="sport-image">
+            <p>Патрик Джейн отмечает связь между старым делом и новым символом.</p>
+        </div>
+
+        <!-- Карта подозреваемых -->
+        <div class="card" id="table">
+            <div class="card-icon">ФИГУРАНТЫ · 003</div>
+            <h2>Ключевые фигуранты</h2>
+            <ol class="news-list">
+                <li>Основной подозреваемый — замечен у места преступления</li>
+                <li>Посредник — контролирует ложные наводки</li>
+                <li>Свидетель — боится говорить напрямую</li>
+            </ol>
+
+            <h3>Следующие операции CBI</h3>
+            <ul class="news-list">
+                <li>Операция «Красная нить»</li>
+                <li>Контакт через чайный дом</li>
+                <li>Проверка символа улыбающегося смайла</li>
+            </ul>
+        </div>
+
+        <!-- Видеоразбор — YouTube embed вместо локального mp4 -->
+        <div class="card card-full" id="video">
+            <div class="card-icon">ВИДЕО · 004</div>
+            <h2>Видеоразбор: официальный трейлер The Mentalist</h2>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://vkvideo.ru/video-230460778_456239183"
+                    title="The Mentalist — Official Trailer (CBS)"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+            <p style="margin-top:8px; font-size:13px; color:var(--text-muted);">
+                Официальный трейлер сериала «The Mentalist» (CBS, 2008). Психолог Патрик Джейн — консультант Бюро расследований Калифорнии.
+            </p>
+        </div>
+
+        <!-- Полезные разделы -->
+        <div class="card">
+            <div class="card-icon">АРХИВ · 005</div>
+            <h2>Полезные разделы</h2>
+            <p>
+                Изучайте <a href="/cases/">архив дел CBI</a> и
+                <a href="/academy/">программу обучения</a> агентов.
+            </p>
+            <p>
+                Поделитесь своей версией в разделе <a href="/comments/">Теории</a> или
+                передайте наводку через <a href="/feedback/">Связь с CBI</a>.
+            </p>
+        </div>
+
+        <!-- Срочное обновление -->
+        <div class="card">
+            <div class="card-icon">СРОЧНО · 006</div>
+            <h2>Срочное обновление</h2>
+            <div class="alert-breaking">
+                <p>На новом месте преступления найден улыбающийся смайл и нить цвета бордо.</p>
+            </div>
+            <p>
+                Команда Лисбон выехала на место в 03:42. Джейн уже там.
+            </p>
+        </div>
+
+    </div><!-- /cards-grid -->
+</div><!-- /section -->
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="section">
+
+    <div class="page-heading">
+        <h1>5 дел из 1 сезона</h1>
+        <p>Подборка кейсов из первых пяти серий The Mentalist: кратко, по сути и с ключевыми уликами.</p>
+    </div>
+
+    <nav class="page-nav" aria-label="Серии">
+        <h3>Серии</h3>
+        <ul>
+            <li><a href="#episode-1">S01E01</a></li>
+            <li><a href="#episode-2">S01E02</a></li>
+            <li><a href="#episode-3">S01E03</a></li>
+            <li><a href="#episode-4">S01E04</a></li>
+            <li><a href="#episode-5">S01E05</a></li>
+        </ul>
+    </nav>
+
+    <div class="cards-grid">
+
+        <div class="card" id="episode-1">
+            <div class="card-icon">S01E01</div>
+            <h2>Pilot</h2>
+            <blockquote class="quote">"Я не психик. Просто хорошо умею замечать то, что другие игнорируют."</blockquote>
+            <p>
+                <strong>Дело:</strong> двойное убийство в Палм-Спрингс.
+            </p>
+            <p>
+                <em>Фокус Джейна:</em> ложные признания, психология подозреваемых и поведенческие маркеры в семье жертв.
+            </p>
+            <ul class="news-list">
+                <li>Мотив оказался ближе к бытовому окружению, чем к серийному почерку.</li>
+                <li>Реакции на провокации вывели CBI на настоящего убийцу.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="episode-2">
+            <div class="card-icon">S01E02</div>
+            <h2>Red Hair and Silver Tape</h2>
+            <blockquote class="quote">"Ложь — это инструмент. Вопрос в том, кто им владеет."</blockquote>
+            <p>
+                <strong>Дело:</strong> убийство девушки в Напе; улики указывают на маньяка из архива CBI.
+            </p>
+            <ul class="news-list">
+                <li>Старая теория о серийности не выдерживает проверку деталями.</li>
+                <li>Связь с прошлым делом используется как отвлекающий след.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="episode-3">
+            <div class="card-icon">S01E03</div>
+            <h2>Red Tide</h2>
+            <blockquote class="quote">"Идеальная семья — первый признак того, что смотреть нужно глубже."</blockquote>
+            <p>
+                <strong>Дело:</strong> тело найдено у побережья; под подозрением окружение семьи и бизнес-партнеры.
+            </p>
+            <ul class="news-list">
+                <li>Идеальный фасад семьи скрывает острые внутренние конфликты.</li>
+                <li>Джейн вскрывает ложь через публичное давление и импровизацию.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="episode-4">
+            <div class="card-icon">S01E04</div>
+            <h2>Ladies in Red</h2>
+            <blockquote class="quote">"Деньги скрывают многое, но не всё — эмоции сильнее."</blockquote>
+            <p>
+                <strong>Дело:</strong> убийство банкирши; расследование уходит в закрытый круг влиятельных людей.
+            </p>
+            <ul class="news-list">
+                <li>Финансовые связи и личные отношения дают больше, чем формальные алиби.</li>
+                <li>Наблюдение за микрореакциями помогает сузить круг до ключевой фигуры.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="episode-5">
+            <div class="card-icon">S01E05</div>
+            <h2>Redwood</h2>
+            <blockquote class="quote">"Простые истории о простых людях — самые сложные дела."</blockquote>
+            <p>
+                <strong>Дело:</strong> смерть школьного футболиста; первоначальная версия быстро рушится.
+            </p>
+            <ul class="news-list">
+                <li>За внешне простой историей скрывается цепочка решений взрослых.</li>
+                <li>Команда CBI собирает картину через работу со свидетелями-подростками.</li>
+            </ul>
+            <p>
+                <a href="/">← Вернуться на главную</a>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

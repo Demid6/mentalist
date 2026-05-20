@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="section form-page-section">
+    <div class="page-heading">
+        <h1>Вход агента</h1>
+        <p>Войдите, чтобы открыть Академию детективов</p>
+        <p>Нет аккаунта? <a href="/register/">Запросить доступ</a></p>
+    </div>
+
+    <div class="form-container">
+        <form method="post" action="/login/" class="registration-form" novalidate>
+            {% csrf_token %}
+            <h2>Авторизация</h2>
+
+            <div class="form-group">
+                <label for="username">Логин</label>
+                <input type="text" id="username" name="username" placeholder="cbi_observer" required minlength="3" maxlength="20">
+                <span class="error-message" id="username-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required minlength="6">
+                <span class="error-message" id="password-error"></span>
+            </div>
+
+            <button type="submit" id="submit-btn">Войти</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

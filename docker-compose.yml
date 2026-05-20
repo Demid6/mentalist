@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./web_service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./web_service/mentalist_files:/app
+    environment:
+      - DEBUG=1
+    networks:
+      - cbi_network
+
+  comments:
+    build: ./comments_service
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./comments_service:/app
+    networks:
+      - cbi_network
+
+  notification:
+    build: ./notification_service
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./notification_service:/app
+    env_file:
+      - .env
+    networks:
+      - cbi_network
+
+networks:
+  cbi_network:
+    driver: bridge

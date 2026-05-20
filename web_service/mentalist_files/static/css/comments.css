@@ -1,0 +1,170 @@
+/* ============================================================
+   Comments / Теории page
+   ============================================================ */
+
+.comments-container {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* ---- Comment form ---- */
+.comment-form {
+    background: var(--white);
+    padding: 36px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--parchment-dark);
+    border-top: 4px solid var(--crimson);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 32px;
+}
+
+.comment-form h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--parchment-dark);
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    color: var(--gray-800);
+    background: var(--gray-50);
+    margin-bottom: 14px;
+    box-sizing: border-box;
+    transition: all var(--transition);
+    resize: vertical;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+    outline: none;
+    border-color: var(--crimson);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(139, 26, 26, .10);
+}
+
+#submit-comment {
+    background: var(--crimson);
+    color: var(--parchment);
+    border: none;
+    padding: 11px 28px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--transition);
+    box-shadow: var(--shadow-red);
+}
+
+#submit-comment:hover {
+    background: var(--crimson-mid);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(178, 34, 34, .42);
+}
+
+/* ---- Comments list ---- */
+.comments-list {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--parchment-dark);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.comment-item {
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--parchment-mid);
+    transition: background var(--transition);
+    position: relative;
+}
+
+.comment-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 3px; height: 100%;
+    background: var(--crimson);
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.comment-item:hover::before { opacity: 1; }
+.comment-item:last-child     { border-bottom: none; }
+.comment-item:hover          { background: var(--gray-50); }
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--crimson);
+    font-family: 'Special Elite', monospace;
+    letter-spacing: 0.5px;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: 'Special Elite', monospace;
+}
+
+.comment-text {
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+}
+
+.loading, .no-comments {
+    text-align: center;
+    padding: 52px 20px;
+    color: var(--text-muted);
+    font-size: 15px;
+    font-family: 'Special Elite', monospace;
+    letter-spacing: 0.5px;
+}
+
+/* ---- New comment highlight ---- */
+.comment-item.new { animation: highlight 1.4s ease; }
+
+@keyframes highlight {
+    0%   { background-color: #f5ede4; }
+    100% { background-color: transparent; }
+}
+
+/* ---- Notification ---- */
+.notification {
+    position: fixed;
+    top: 84px;
+    right: 20px;
+    padding: 14px 22px;
+    border-radius: var(--radius-md);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 1001;
+    opacity: 0;
+    transform: translateX(420px);
+    transition: all 0.35s ease;
+    box-shadow: var(--shadow-lg);
+    max-width: 340px;
+}
+
+.notification.show    { opacity: 1; transform: translateX(0); }
+.notification.success { background: linear-gradient(135deg, #22c55e, #16a34a); }
+.notification.error   { background: linear-gradient(135deg, #ef4444, #dc2626); }
