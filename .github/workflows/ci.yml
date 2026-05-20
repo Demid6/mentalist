@@ -1,3 +1,16 @@
+me: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
 name: CI/CD Pipeline
 
 on:
@@ -19,14 +32,14 @@ jobs:
       with:
         python-version: '3.11'
     
-    - name: Install dependencies (web_service)
+    - name: Install dependencies for web_service
       run: |
-        cd web_service
+        cd web_service/mentalist_files
         pip install -r requirements.txt || true
     
     - name: Run Django checks
       run: |
-        cd web_service
+        cd web_service/mentalist_files
         python manage.py check
     
     - name: Check Dockerfiles exist
