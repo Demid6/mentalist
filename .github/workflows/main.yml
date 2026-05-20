@@ -12,17 +12,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     
-    - name: Debug - show files
-      run: |
-        echo "=== Current directory ==="
-        pwd
-        echo "=== List all files ==="
-        ls -la
-        echo "=== web_service directory ==="
-        ls -la web_service/
-        echo "=== requirements.txt content ==="
-        cat web_service/requirements.txt
-    
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -42,7 +31,7 @@ jobs:
         test -f docker-compose.yml && echo "✓ docker-compose.yml"
     
     - name: Validate docker-compose
-      run: docker-compose config -q && echo "✓ docker-compose valid"
+      run: docker compose config -q && echo "✓ docker-compose valid"
 
   build:
     runs-on: ubuntu-latest
